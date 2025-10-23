@@ -1,0 +1,33 @@
+
+:root{
+  --bg:#ffffff; --text:#111827; --muted:#6b7280; --card:#f8fafc; --accent:#0ea5a4;
+}
+[data-theme="dark"]{
+  --bg:#0b1220; --text:#e6eef6; --muted:#94a3b8; --card:#071021; --accent:#06b6d4;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo img{height:56px}
+.controls{display:flex;gap:12px;align-items:center}
+.mode-toggle{background:none;border:1px solid var(--muted);padding:8px;border-radius:8px;cursor:pointer;color:var(--text)}
+.nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;margin-top:18px}
+.slider{position:relative;border-radius:12px;overflow:hidden;min-height:300px;background:linear-gradient(135deg,var(--card),#e6f7f7)}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;transition:opacity .6s;opacity:0}
+.slide.active{opacity:1;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover}
+.whatsapp-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none}
+.cards{display:flex;flex-direction:column;gap:12px}
+.card{display:flex;gap:12px;align-items:center;padding:12px;background:var(--card);border-radius:10px;text-decoration:none;color:inherit}
+.card img{width:64px;height:64px;border-radius:8px;flex-shrink:0}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+footer{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-top:1px solid rgba(0,0,0,0.06);margin-top:28px;color:var(--muted)}
+.service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.service{background:var(--card);padding:16px;border-radius:10px;display:flex;gap:12px;align-items:flex-start}
+.service img{width:80px;height:80px;border-radius:8px}
+.contact-card{background:var(--card);padding:16px;border-radius:10px}
+.logo-mini{height:138px;opacity:0.95}
+@media (max-width:900px){.hero{grid-template-columns:1fr;}.header{flex-direction:column;align-items:flex-start}.logo img{height:48px}}
